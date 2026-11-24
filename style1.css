@@ -1,0 +1,43 @@
+@import url("ui-system.css");
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #45200a;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 4px;
+    right: 0;
+    background: #e3c99d;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after, nav ul li a.active::after {
+    width: 100%;
+    left: 0;
+    background: #e3c99d;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #000;
+    background: transparent;
+}
